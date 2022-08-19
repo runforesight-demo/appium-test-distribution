@@ -12,6 +12,7 @@ on:
 
 env:
   FORESIGHT_UPLOADER_SIGNER_URL: https://upload.thundra.us
+  WORKFLOW_TELEMETRY_BASE_URL: https://foresight.service.thundra.us 
 
 jobs:
   build:
