@@ -11,8 +11,8 @@ on:
   workflow_dispatch:
 
 env:
-  FORESIGHT_UPLOADER_SIGNER_URL: https://upload.thundra.us
-  WORKFLOW_TELEMETRY_BASE_URL: https://foresight.service.thundra.us 
+  FORESIGHT_UPLOADER_SIGNER_URL: https://upload.service.runforesight.us
+  WORKFLOW_TELEMETRY_BASE_URL: https://api.service.runforesight.us
 
 jobs:
   build:
@@ -41,7 +41,7 @@ jobs:
         
     - name: Analyze Test and/or Coverage Results
       if: always()
-      uses: thundra-io/foresight-test-kit-action@v1
+      uses: runforesight/foresight-test-kit-action@v1
       with:
         api_key: ${{ secrets.FORESIGHT_API_KEY }}
         test_framework: testng
